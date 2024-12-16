@@ -115,7 +115,8 @@ def start_sever():
         if request.method == 'GET':
             text = request.args.get('text')
             kwargs_str = request.args.get('kwargs')
-            kwargs = yaml.load(kwargs_str)
+            # kwargs = yaml.load(kwargs_str)
+            kwargs = yaml.safe_load(kwargs_str)
             # kwargs['processes'] = 1
             wav = sdk_api.tts_sdk(text=text, **kwargs)
             return Response(wav, mimetype='audio/wav')

@@ -10,14 +10,15 @@ librosa
 numpy
 phkit
 pydub
-PyYAML<=5.4.1
+PyYAML
+# <=5.4.1
 requests
 scikit_learn
 scipy
 setproctitle
 # setuptools
 # tensorboardX
-# torch
+torch
 tqdm
 # umap_learn
 Unidecode
